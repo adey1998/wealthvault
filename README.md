@@ -1,4 +1,4 @@
-# Secure, Highly Available Client Portfolio Management Platform – AWS + Terraform
+# WealthVault — Secure, Highly Available Client Portfolio Management Platform
 
 ## Overview
 This project simulates the **AWS infrastructure** I designed and deployed for a **finance industry** client-facing application.  
@@ -6,7 +6,6 @@ The platform enables high-net-worth clients to securely access **portfolio data*
 
 The focus was on **security**, **compliance**, **high availability**, and **cost optimization** — following best practices for **PCI-DSS** and **SOX** regulatory requirements.
 
----
 
 ## Key Business Requirements
 - **24/7 availability** – Market data and portfolios must be accessible at all times.
@@ -14,7 +13,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **Scalable infrastructure** – Handle peak traffic during market hours without downtime.
 - **Cost efficiency** – Monitor and control operational spend without compromising performance.
 
----
 
 ## Architecture
 
@@ -28,7 +26,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **CloudWatch & CloudTrail** – Real-time monitoring, logging, and compliance auditing.
 - **AWS Budgets** – Automated cost alerts to prevent overspending.
 
----
 
 ## Terraform Implementation
 - **Infrastructure as Code (IaC):** All AWS resources provisioned with Terraform.
@@ -37,7 +34,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **Workspaces:** Separate `dev` and `prod` environments with isolated state.
 - **CI/CD:** GitHub Actions with OIDC → AWS IAM Role for secure, automated deployments.
 
----
 
 ## Security & Compliance Features
 
@@ -58,7 +54,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - Automated RDS backups
 - Snapshot retention policy
 
----
 
 ## Impact & Outcomes
 - **99.99% uptime** achieved through multi-AZ deployment & auto scaling.
@@ -66,14 +61,12 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **50% faster environment provisioning** using Terraform modules & CI/CD pipelines.
 - **30% cost savings** via right-sized compute, S3 lifecycle policies, and automated budget alerts.
 
----
 
 ## Screenshots
 | ECS Service | CloudWatch Alarm | Budget Alert |
 |-------------|------------------|--------------|
 | ![ECS](screenshots/ecs_service.png) | ![CloudWatch](screenshots/cloudwatch_alarm.png) | ![Budget](screenshots/budget_alert.png) |
 
----
 
 ## How to Deploy
 
