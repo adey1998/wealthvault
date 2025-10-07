@@ -63,7 +63,7 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - Demonstrated **cost visibility** and control with AWS Budgets.  
 
 
-## How to Deploy
+## ⚡ How to Deploy
 ```bash
 # Clone the repo
 git clone https://github.com/username/wealthvault-aws.git
