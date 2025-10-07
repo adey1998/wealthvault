@@ -116,6 +116,11 @@ terraform destroy
 - **Monitoring:** CloudWatch, metrics, logs.  
 - **Cost Optimization:** AWS Budgets, autoscaling, resource right-sizing.  
 
+## 📷 Screenshots
+
+Full walkthrough, screenshots, and feature breakdown available at:
+
+🔗 [Wealthvault Project Page](https://arvildey.com/projects/wealthvault)
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).  
