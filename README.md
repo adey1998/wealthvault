@@ -1,20 +1,20 @@
 # WealthVault — Secure, Highly Available Client Portfolio Management Platform
 
-## Overview
+## 🚀 Overview
 This project simulates the **AWS infrastructure** I designed and deployed for a **finance-industry** client-facing application.  
 The platform enables high-net-worth clients to securely access **portfolio data**, **transaction history**, and **market insights** in real time.
 
 The focus was on **security**, **compliance**, **high availability**, and **cost optimization** — following best practices aligned with **PCI-DSS** and **SOX** guidelines.
 
 
-## Key Business Requirements
+## ❓ Key Business Requirements
 - **24/7 availability** — Portfolio data and market insights must be accessible at all times.  
 - **Strict security & compliance** — Encryption in transit & at rest, audit logging, least-privilege IAM.  
 - **Scalable infrastructure** — Handle peak load during trading hours without downtime.  
 - **Cost efficiency** — Monitor and control AWS spend with alerts and resource right-sizing.  
 
 
-## Architecture
+## 🧠 Architecture
 
 ### Core Components
 - **VPC with Public & Private Subnets (2 AZs)** — Isolates sensitive workloads and provides redundancy.  
@@ -28,7 +28,7 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 > *(RDS PostgreSQL and CloudFront CDN were explored and remain optional for future iterations.)*
 
 
-## Terraform Implementation
+## 🧩 Terraform Implementation
 - **Infrastructure as Code (IaC):** All resources provisioned and version-controlled via Terraform.  
 - **Modular Design:** Logical separation of VPC, ECS, S3, IAM, and monitoring.  
 - **Workspaces:** Separate `dev` and `prod` environments with isolated states.  
@@ -36,7 +36,7 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **CI/CD Ready:** GitHub Actions → AWS OIDC workflow for secure automated deployments.  
 
 
-## Security & Compliance Features
+## 🔒 Security & Compliance Features
 
 ### Encryption
 - **S3 with SSE-S3 (AES-256)**  
@@ -56,7 +56,7 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **CloudWatch Metrics & Alarms** for ECS and ALB health  
 
 
-## Outcomes
+## 📦 Outcomes
 - Achieved **99.99% uptime design** through Multi-AZ architecture and Fargate scaling.  
 - Reduced provisioning time by **50%** via Terraform modules and automated pipelines.  
 - Implemented **continuous compliance** via AWS Config managed rules.  
@@ -78,7 +78,7 @@ terraform apply
 ```
 
 
-## Verify Deployment
+## 🔍 Verify Deployment
 ```bash
 # Get the ALB URL and test it
 terraform output alb_dns_name
@@ -93,7 +93,7 @@ Check in AWS Console:
 - **CloudTrail + AWS Config** → Recording and evaluating  
 
 
-## Clean Up
+## 🧹 Clean Up
 ```bash
 # Destroy all Terraform-managed resources (to avoid charges)
 terraform destroy
@@ -101,14 +101,14 @@ terraform destroy
 > If you added resources outside Terraform, remove those manually before destroy.
 
 
-## Future Enhancements
+## 🔮 Future Enhancements
 - Add **HTTPS (ACM)** and CloudFront for global low-latency delivery.  
 - Add **RDS PostgreSQL (Multi-AZ, encrypted)** with Secrets Manager integration.  
 - Integrate **WAF** for web-layer protection.  
 - Extend **CI/CD pipeline** for blue/green ECS deployments.  
 
 
-## SAA Concepts Demonstrated
+## 🎓 SAA Concepts Demonstrated
 - **Networking:** VPC, subnets, routing, NAT, security groups, ALB.  
 - **Compute:** ECS Fargate, target groups, scaling policies.  
 - **Storage:** S3 encryption, versioning, lifecycle management.  
@@ -117,5 +117,5 @@ terraform destroy
 - **Cost Optimization:** AWS Budgets, autoscaling, resource right-sizing.  
 
 
-## License
+## 📜 License
 MIT © Arvil Dey
