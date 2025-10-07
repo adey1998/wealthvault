@@ -1,5 +1,17 @@
 # Store database credentials securely in Secrets Manager
 
+# Strong DB password that avoids forbidden chars (/, ", @)
+resource "random_password" "db" {
+    length           = 20
+    special          = true
+    min_upper        = 1
+    min_lower        = 1
+    min_numeric      = 1
+    min_special      = 1
+    override_special = "!#$%^&*()-_=+.,?"  # safe set for RDS
+}
+
+
 # Create the secret container (like creating an empty vault)
 resource "aws_secretsmanager_secret" "db" {
     name        = "wealthvault-db-credentials"
@@ -13,7 +25,7 @@ resource "aws_secretsmanager_secret_version" "db_v1" {
     # This JSON is what gets encrypted and stored
     secret_string   = jsonencode({
         username    = "wv_app"
-        password    = "12345"
+        password    = random_password.db.result
     })
 }
 
