@@ -116,7 +116,6 @@ terraform destroy
 - **Monitoring:** CloudWatch, metrics, logs.  
 - **Cost Optimization:** AWS Budgets, autoscaling, resource right-sizing.  
 
----
 
 ## License
 MIT © Arvil Dey
