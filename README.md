@@ -6,7 +6,6 @@ The platform enables high-net-worth clients to securely access **portfolio data*
 
 The focus was on **security**, **compliance**, **high availability**, and **cost optimization** — following best practices aligned with **PCI-DSS** and **SOX** guidelines.
 
----
 
 ## Key Business Requirements
 - **24/7 availability** — Portfolio data and market insights must be accessible at all times.  
@@ -14,7 +13,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **Scalable infrastructure** — Handle peak load during trading hours without downtime.  
 - **Cost efficiency** — Monitor and control AWS spend with alerts and resource right-sizing.  
 
----
 
 ## Architecture
 
@@ -29,7 +27,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 
 > *(RDS PostgreSQL and CloudFront CDN were explored and remain optional for future iterations.)*
 
----
 
 ## Terraform Implementation
 - **Infrastructure as Code (IaC):** All resources provisioned and version-controlled via Terraform.  
@@ -38,7 +35,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **Remote State (optional):** Designed for S3 + DynamoDB locking in team settings.  
 - **CI/CD Ready:** GitHub Actions → AWS OIDC workflow for secure automated deployments.  
 
----
 
 ## Security & Compliance Features
 
@@ -59,7 +55,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - **AWS Budgets** triggers monthly alerts via email  
 - **CloudWatch Metrics & Alarms** for ECS and ALB health  
 
----
 
 ## Outcomes
 - Achieved **99.99% uptime design** through Multi-AZ architecture and Fargate scaling.  
@@ -67,7 +62,6 @@ The focus was on **security**, **compliance**, **high availability**, and **cost
 - Implemented **continuous compliance** via AWS Config managed rules.  
 - Demonstrated **cost visibility** and control with AWS Budgets.  
 
----
 
 ## How to Deploy
 ```bash
@@ -83,7 +77,6 @@ terraform plan
 terraform apply
 ```
 
----
 
 ## Verify Deployment
 ```bash
@@ -99,7 +92,6 @@ Check in AWS Console:
 - **S3** → Public Access Block = ON, Versioning = Enabled  
 - **CloudTrail + AWS Config** → Recording and evaluating  
 
----
 
 ## Clean Up
 ```bash
@@ -108,7 +100,6 @@ terraform destroy
 ```
 > If you added resources outside Terraform, remove those manually before destroy.
 
----
 
 ## Future Enhancements
 - Add **HTTPS (ACM)** and CloudFront for global low-latency delivery.  
@@ -116,7 +107,6 @@ terraform destroy
 - Integrate **WAF** for web-layer protection.  
 - Extend **CI/CD pipeline** for blue/green ECS deployments.  
 
----
 
 ## SAA Concepts Demonstrated
 - **Networking:** VPC, subnets, routing, NAT, security groups, ALB.  
