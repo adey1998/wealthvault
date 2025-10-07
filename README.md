@@ -118,4 +118,4 @@ terraform destroy
 
 
 ## 📜 License
-MIT © Arvil Dey
+This project is licensed under the [MIT License](LICENSE).  
